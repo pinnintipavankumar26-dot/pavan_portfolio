@@ -1,0 +1,52 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  html {
+    scroll-behavior: smooth;
+  }
+  
+  body {
+    @apply bg-background text-slate-100 overflow-x-hidden;
+    /* Custom Scrollbar */
+    &::-webkit-scrollbar {
+      width: 10px;
+    }
+    &::-webkit-scrollbar-track {
+      @apply bg-navy-900;
+    }
+    &::-webkit-scrollbar-thumb {
+      @apply bg-accent-blue/50 rounded-full border-2 border-navy-900;
+    }
+    &::-webkit-scrollbar-thumb:hover {
+      @apply bg-accent-cyan/80;
+    }
+  }
+}
+
+@layer utilities {
+  .shadow-glass {
+    box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.37);
+  }
+  .shadow-glow {
+    box-shadow: 0 0 25px rgba(0, 240, 255, 0.2);
+  }
+  .shadow-glow-blue {
+    box-shadow: 0 0 25px rgba(59, 130, 246, 0.25);
+  }
+  .drop-shadow-glow {
+    filter: drop-shadow(0 0 10px rgba(0, 240, 255, 0.5));
+  }
+  
+  .font-outfit {
+    font-family: 'Outfit', sans-serif;
+  }
+}
+
+/* Base custom styles mimicking the old portfolio's animations */
+.cursor-hover {
+  transform: scale(2) translate3d(var(--tx), var(--ty), 0) !important;
+  background-color: rgba(0, 240, 255, 0.1) !important;
+  border: 1px solid rgba(0, 240, 255, 0.5) !important;
+}
