@@ -42,12 +42,38 @@ const Projects = () => {
                   {project.description}
                 </p>
                 
-                <div className="flex flex-wrap gap-2 mt-auto">
-                  {project.tags.map((tag, i) => (
-                    <span key={i} className="px-3 py-1 text-xs font-medium bg-navy-900 text-accent-cyan border border-accent-cyan/20 rounded-full">
-                      {tag}
-                    </span>
-                  ))}
+                <div className="flex flex-col flex-grow mt-4">
+                  <div className="flex flex-wrap gap-2 mb-4">
+                    {project.tags.map((tag, i) => (
+                      <span key={i} className="px-3 py-1 text-xs font-medium bg-navy-900 text-accent-cyan border border-accent-cyan/20 rounded-full">
+                        {tag}
+                      </span>
+                    ))}
+                  </div>
+
+                  {/* Links Section */}
+                  <div className="mt-auto pt-4 border-t border-white/10 flex gap-3">
+                    {project.github && (
+                      <a 
+                        href={project.github} 
+                        target="_blank" 
+                        rel="noopener noreferrer" 
+                        className="flex-1 text-center py-2 text-sm font-medium text-white bg-white/5 hover:bg-white/10 rounded-lg transition-all border border-white/10"
+                      >
+                        GitHub
+                      </a>
+                    )}
+                    {project.demo && (
+                      <a 
+                        href={project.demo} 
+                        target="_blank" 
+                        rel="noopener noreferrer" 
+                        className="flex-1 text-center py-2 text-sm font-medium text-white bg-accent-blue/20 hover:bg-accent-blue/30 border border-accent-blue/40 rounded-lg transition-all flex items-center justify-center gap-2"
+                      >
+                        Live Demo <Icons.FaExternalLinkAlt className="text-[10px]" />
+                      </a>
+                    )}
+                  </div>
                 </div>
               </motion.div>
             );

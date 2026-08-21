@@ -1,34 +1,41 @@
 export const projectsData = [
   {
     id: 1,
-    title: "Student Result Program",
-    badge: "JAVA MODULE",
-    icon: "FaGraduationCap",
-    description: "An interactive Java application that receives student record details and subject marks, automatically computing totals, percentages, grade allocations, and pass/fail evaluations.",
-    tags: ["Java", "OOP", "Logic Processing"]
+    title: "Academic DB",
+    badge: "FULL STACK PROJECT",
+    icon: "FaDatabase",
+    description:
+      "A web-based academic database platform designed to manage and organize academic information through a clean and user-friendly interface.",
+    tags: ["React", "JavaScript", "Database", "Web Development"],
+    demo: "https://academic-db.vercel.app/"
   },
+
   {
     id: 2,
-    title: "Employee Payroll Program",
-    badge: "JAVA MODULE",
-    icon: "FaCalculator",
-    description: "A comprehensive salary processing engine implemented in Java that calculates net employee compensation factoring in basic pay, HRA, DA allowances, and statutory PF deductions.",
-    tags: ["Java", "Financial Logic", "Functions"]
+    title: "SmartHire",
+    badge: "JAVA SPRING BOOT PROJECT",
+    icon: "FaBriefcase",
+    description:
+      "A smart recruitment platform designed to connect job seekers and employers through a modern web application, with a Java Spring Boot backend and a responsive frontend.",
+    tags: ["Java", "Spring Boot", "MySQL", "React", "REST API"],
+    demo: "https://smarthire-frontend-ayo1.onrender.com/"
   },
+
   {
     id: 3,
-    title: "Online Shopping Bill",
-    badge: "PRACTICE MODULE",
-    icon: "FaCartShopping",
-    description: "E-commerce billing simulator program that calculates final invoice amounts with dynamic item prices, applicable GST tax structures, and promotional discount deductions.",
-    tags: ["Java", "Tax Algorithms", "Arrays"]
+    title: "Bluetooth-Controlled Smart Robot Car",
+    badge: "HACKATHON PROJECT",
+    icon: "FaCar",
+    description:
+      "A Bluetooth-controlled smart robot car developed during my first year of B.Tech as an individual hackathon project. The system uses Arduino, an HC-05 Bluetooth module, an HC-SR04 ultrasonic sensor, an SG90 servo motor, and an L293D motor driver for wireless control and obstacle detection.",
+    tags: [
+      "Arduino",
+      "Bluetooth",
+      "HC-05",
+      "HC-SR04",
+      "Robotics",
+      "Embedded Systems"
+    ],
+    demo: ""
   },
-  {
-    id: 4,
-    title: "Java Pattern Programs",
-    badge: "LOGIC MODULE",
-    icon: "FaCode",
-    description: "Advanced algorithmic pattern printing suites focusing on numerical, star pyramid, and alphabetical matrices to hone complex nested loop mechanics and logic optimization.",
-    tags: ["Java", "Nested Loops", "Algorithms"]
-  }
 ];

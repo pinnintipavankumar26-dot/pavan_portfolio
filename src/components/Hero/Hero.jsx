@@ -45,28 +45,28 @@ const Hero = () => {
           initial={{ opacity: 0, scale: 0.8 }}
           animate={{ opacity: 1, scale: 1 }}
           transition={{ duration: 0.8, delay: 0.2 }}
-          className="flex-1 relative flex justify-center items-center h-[500px]"
+          className="flex-1 relative flex justify-center items-center w-full max-w-[350px] md:max-w-[450px] lg:max-w-[600px] aspect-square mx-auto mt-10 md:mt-0"
         >
           {/* Animated Rings */}
-          <div className="absolute inset-0 border-2 border-accent-cyan/20 rounded-full animate-[spin_20s_linear_infinite] m-10 border-dashed"></div>
-          <div className="absolute inset-4 border border-accent-blue/30 rounded-full animate-[spin_15s_linear_infinite_reverse] m-12"></div>
+          <div className="absolute inset-0 border-2 border-accent-cyan/20 rounded-full animate-[spin_20s_linear_infinite] m-[2%] border-dashed"></div>
+          <div className="absolute inset-0 border border-accent-blue/30 rounded-full animate-[spin_15s_linear_infinite_reverse] m-[8%]"></div>
           
           {/* Profile Image */}
-          <div className="relative w-72 h-72 rounded-full overflow-hidden border-4 border-navy-800 shadow-glow-blue z-10 bg-navy-900">
+          <div className="relative w-[80%] h-[80%] rounded-full overflow-hidden border-4 border-navy-800 shadow-glow-blue z-10 bg-navy-900">
             <img src={profileImg} alt="Pavan Kumar" className="w-full h-full object-cover" />
           </div>
 
           {/* Floating Icons */}
-          <motion.div animate={{ y: [0, -15, 0] }} transition={{ repeat: Infinity, duration: 4 }} className="absolute top-10 left-10 p-4 bg-navy-800/80 backdrop-blur rounded-2xl border border-white/10 shadow-lg z-20 text-accent-cyan">
+          <motion.div animate={{ y: [0, -15, 0] }} transition={{ repeat: Infinity, duration: 4 }} className="absolute top-[10%] left-[5%] p-4 bg-navy-800/80 backdrop-blur rounded-2xl border border-white/10 shadow-lg z-20 text-accent-cyan">
             <FaGraduationCap size={24} />
           </motion.div>
-          <motion.div animate={{ y: [0, 15, 0] }} transition={{ repeat: Infinity, duration: 3.5, delay: 1 }} className="absolute bottom-20 left-4 p-4 bg-navy-800/80 backdrop-blur rounded-2xl border border-white/10 shadow-lg z-20 text-accent-blue">
+          <motion.div animate={{ y: [0, 15, 0] }} transition={{ repeat: Infinity, duration: 3.5, delay: 1 }} className="absolute bottom-[15%] left-[2%] p-4 bg-navy-800/80 backdrop-blur rounded-2xl border border-white/10 shadow-lg z-20 text-accent-blue">
             <FaMicrochip size={24} />
           </motion.div>
-          <motion.div animate={{ y: [0, -15, 0] }} transition={{ repeat: Infinity, duration: 4.5, delay: 0.5 }} className="absolute top-20 right-4 p-4 bg-navy-800/80 backdrop-blur rounded-2xl border border-white/10 shadow-lg z-20 text-purple-400">
+          <motion.div animate={{ y: [0, -15, 0] }} transition={{ repeat: Infinity, duration: 4.5, delay: 0.5 }} className="absolute top-[15%] right-[2%] p-4 bg-navy-800/80 backdrop-blur rounded-2xl border border-white/10 shadow-lg z-20 text-purple-400">
             <FaCode size={24} />
           </motion.div>
-          <motion.div animate={{ y: [0, 15, 0] }} transition={{ repeat: Infinity, duration: 3, delay: 1.5 }} className="absolute bottom-10 right-10 p-4 bg-navy-800/80 backdrop-blur rounded-2xl border border-white/10 shadow-lg z-20 text-accent-sky">
+          <motion.div animate={{ y: [0, 15, 0] }} transition={{ repeat: Infinity, duration: 3, delay: 1.5 }} className="absolute bottom-[10%] right-[8%] p-4 bg-navy-800/80 backdrop-blur rounded-2xl border border-white/10 shadow-lg z-20 text-accent-sky">
             <FaBrain size={24} />
           </motion.div>
         </motion.div>
