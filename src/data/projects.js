@@ -6,7 +6,7 @@ export const projectsData = [
     icon: "FaDatabase",
     description:
       "A web-based academic database platform designed to manage and organize academic information through a clean and user-friendly interface.",
-    tags: ["React", "JavaScript", "Database", "Web Development"],
+    tags: ["Django", "Python", "PostgreSQL", "JavaScript", "HTML", "CSS", "Full Stack"],
     demo: "https://academic-db.vercel.app/"
   },
 
