@@ -1,6 +1,5 @@
 import React, { useState, useEffect } from 'react';
 import { motion } from 'framer-motion';
-import { FaDownload } from 'react-icons/fa';
 
 const Navbar = () => {
   const [isScrolled, setIsScrolled] = useState(false);
@@ -53,39 +52,18 @@ const Navbar = () => {
           <span className="text-xl font-bold font-outfit text-white tracking-wide">Pavan Kumar</span>
         </a>
 
-        <div className="hidden md:flex items-center gap-8">
-          <div className="flex gap-6 lg:gap-8 items-center">
-            {navLinks.map((link) => (
-              <a
-                key={link.id}
-                href={link.href}
-                className={`text-sm font-medium transition-colors hover:text-accent-cyan ${
-                  activeSection === link.id ? 'text-accent-cyan' : 'text-slate-300'
-                }`}
-              >
-                {link.name}
-              </a>
-            ))}
-          </div>
-          <a
-            href="/resume.pdf"
-            download="Pinninti-Pavan-Kumar-Resume.pdf"
-            className="flex items-center gap-2 px-5 py-2 rounded-full bg-navy-800 text-white border border-accent-cyan/30 hover:bg-navy-700 hover:border-accent-cyan/60 hover:scale-105 hover:shadow-glow-blue transition-all duration-300 text-sm font-medium"
-          >
-            <FaDownload />
-            Download Resume
-          </a>
-        </div>
-
-        <div className="md:hidden flex items-center">
-          <a
-            href="/resume.pdf"
-            download="Pinninti-Pavan-Kumar-Resume.pdf"
-            className="flex items-center gap-1.5 px-4 py-2 rounded-full bg-navy-800 text-white border border-accent-cyan/30 hover:bg-navy-700 hover:border-accent-cyan/60 hover:shadow-glow-blue transition-all duration-300 text-xs font-medium"
-          >
-            <FaDownload />
-            Resume
-          </a>
+        <div className="hidden md:flex gap-8">
+          {navLinks.map((link) => (
+            <a
+              key={link.id}
+              href={link.href}
+              className={`text-sm font-medium transition-colors hover:text-accent-cyan ${
+                activeSection === link.id ? 'text-accent-cyan' : 'text-slate-300'
+              }`}
+            >
+              {link.name}
+            </a>
+          ))}
         </div>
       </div>
     </motion.nav>
